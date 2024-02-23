@@ -1,0 +1,48 @@
+{
+  "name": "@evolify/tiny",
+  "version": "0.0.1",
+  "author": "孤狼 <coozov@gmail.com>",
+  "homepage": "https://github.com/evolify/tiny#readme",
+  "description": "Tiny utils for web develop",
+  "main": "./lib/index.js",
+  "module": "./esm/index.js",
+  "types": "./esm/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./lib/index.cjs",
+      "import": "./esm/index.mjs",
+      "types": "./esm/index.d.ts"
+    },
+    "./store": {
+      "require": "./esm/store.cjs",
+      "import": "./lib/store.mjs",
+      "types": "./esm/store.d.ts"
+    }
+  },
+  "files": [
+    "esm",
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evolify/tiny.git"
+  },
+  "scripts": {
+    "build:esm": "rm -rf esm && tsc --module es6 --outDir esm",
+    "build:cjs": "rm -rf lib && tsc --module commonjs --outDir lib ",
+    "build": "npm run build:esm && npm run build:cjs"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": ["tiny", "web", "utils", "react"],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^18.2.58",
+    "react": "^18.2.0",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0"
+  }
+}
