@@ -1,4 +1,4 @@
 // export { default as createStore } from "./store"
-import createStore from "./store"
+import Store from "./store"
 
-export { createStore }
+export { Store }
