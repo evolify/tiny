@@ -4,18 +4,19 @@
   "author": "孤狼 <coozov@gmail.com>",
   "homepage": "https://github.com/evolify/tiny#readme",
   "description": "Tiny utils for web develop",
+  "type": "module",
   "main": "./lib/index.js",
   "module": "./esm/index.js",
   "types": "./esm/index.d.ts",
   "exports": {
     ".": {
-      "require": "./lib/index.cjs",
-      "import": "./esm/index.mjs",
+      "require": "./lib/index.js",
+      "import": "./esm/index.js",
       "types": "./esm/index.d.ts"
     },
     "./store": {
-      "require": "./esm/store.cjs",
-      "import": "./lib/store.mjs",
+      "require": "./esm/store.js",
+      "import": "./lib/store.js",
       "types": "./esm/store.d.ts"
     }
   },
