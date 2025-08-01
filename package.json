@@ -15,8 +15,8 @@
       "types": "./esm/index.d.ts"
     },
     "./store": {
-      "require": "./esm/store.js",
-      "import": "./lib/store.js",
+      "require": "./lib/store.js",
+      "import": "./esm/store.js",
       "types": "./esm/store.d.ts"
     }
   },
