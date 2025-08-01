@@ -52,7 +52,11 @@ export default class Store<S>{
   use(): S
   use<T>(compute: (state: S) => T): T
   use<T>(compute?: (state: S) => T): S | T {
-    const state = useSyncExternalStore(this.subscribe, this._getState) as S
+    const state = useSyncExternalStore(
+      this.subscribe,
+      this._getState,
+      this._getState
+    ) as S
     if(!compute){
       return state
     }
